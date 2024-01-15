@@ -828,3 +828,90 @@ width: 0;
       width: 85%;
   }
 }
+
+/* Estilos específicos para la caja de luz del video */
+.lightboxVideo {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Fijo en la pantalla */
+  z-index: 999999; /* En primer plano */
+  left: 0;
+  top: 5%;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Altura completa */
+  background-color: rgba(0,0,0,0.8); /* Fondo semi-transparente */
+}
+
+.lightbox-contentVideo {
+  position: relative;
+  width: 90%; /* Ancho del video como porcentaje para ser responsive */
+  max-width: 465px; /* Máximo ancho posible */
+  margin: auto;
+  padding-top: 3%; /* Espacio superior */
+}
+
+.lightboxVideo video {
+  width: 100%; /* El video ocupa todo el ancho del contenedor */
+  max-height: 70vh; /* Altura máxima para evitar desbordamiento */
+}
+
+.closeVideo {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Media query para pantallas pequeñas, como móviles */
+@media (max-width: 600px) {
+  .lightbox-contentVideo {
+    width: 95%; /* Mayor ancho para pantallas pequeñas */
+    padding-top: 10%; /* Más espacio en la parte superior */
+  }
+  .closeVideo {
+    top: 5px;
+    right: 10px;
+    font-size: 20px; /* Tamaño de cierre más pequeño */
+  }
+}
+
+/* Definición de la fuente personalizada utilizando @font-face */
+@font-face {
+  /* Nombre que asignamos a nuestra fuente para referenciarla después */
+  font-family: 'Andrei'; 
+
+  /* Ruta al archivo de la fuente con su formato correspondiente */
+  src: url('Andrei.ttf') format('truetype');
+}
+
+/* Aplicamos la fuente personalizada a todo el texto dentro del body del documento HTML */
+body {
+  /* 'LetraAndrei' es la fuente personalizada que definimos antes, y 'sans-serif' es la fuente de respaldo */
+  font-family: 'Andrei', sans-serif;
+  font-size: 18px;
+}
+
+/* Estilo general para el botón de reproducción */
+.audio-button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+  cursor: pointer;
+  outline: none;
+  padding: 10px; /* Espaciado alrededor del ícono */
+  font-size: 24px; /* Tamaño del ícono */
+  color: #FFF; /* Color del ícono */
+  border-radius: 50%; /* Hace el botón circular */
+  display: inline-flex; /* Asegura que el ícono esté centrado */
+  align-items: center; /* Centra el ícono verticalmente */
+  justify-content: center; /* Centra el ícono horizontalmente */
+  width: 50px; /* Ancho del botón */
+  height: 50px; /* Altura del botón */
+  transition: background-color 0.3s ease; /* Transición suave para el fondo */
+}
+
+/* Cambiar color de fondo al pasar el ratón por encima (hover) */
+.audio-button:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro al hacer hover */
+}
+
