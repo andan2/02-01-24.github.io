@@ -558,6 +558,16 @@ html, body {
   }
 }
 
+@media (max-width: 900px) {
+  .meteor-1, .meteor-2, .meteor-3, .meteor-4, .meteor-5, 
+  .meteor-6, .meteor-7, .meteor-8, .meteor-9, .meteor-10, 
+  .meteor-11, .meteor-12, .meteor-13, .meteor-14, .meteor-15, 
+  .meteor-16, .meteor-17, .meteor-18, .meteor-19, .meteor-20, 
+  .meteor-21, .meteor-22, .meteor-23, .meteor-24, .meteor-25 {
+    display: none;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
 
 /* style.css */
@@ -915,3 +925,33 @@ body {
   background-color: rgba(0, 0, 0, 0.7); /* Fondo más oscuro al hacer hover */
 }
 
+  /* botón del home */
+
+  .home-button-container {
+    position: absolute;
+    top: 73%; /* Ajusta según tu layout */
+    right: 20px; /* Ajusta según tu layout */
+    z-index: 800; /* Asegúrate de que no quede detrás de otros elementos */
+    }
+  
+    #home-button {
+    display: inline-block; /* Hace que el enlace se comporte como un botón */
+    width: 23px; /* Ajusta el ancho a tu preferencia */
+    height: 23px; /* Ajusta la altura para mantener el botón proporcionado */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro con opacidad */
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    }
+    
+    #home-button i {
+    color: white; /* Icono blanco */
+    font-size: 20px;
+    text-align: center;
+    }
+    
+    #home-button:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo más opaco al pasar el ratón */
+    }
